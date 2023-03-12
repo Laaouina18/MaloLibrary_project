@@ -21,8 +21,34 @@ body{
     border-radius: 20px;
     background: linear-gradient(to bottom right,#673AB7,#7E57C2);
     box-shadow: 0.1px 4px 8px 4px rgba(0,0,0,0.5);
+   width: 100%;height: 100vh;
 }
-
+.ensemble{
+ width: 100%;
+ font-display: flex;
+ justify-content: space-between;
+}
+#nav{
+   font-size:20px;color:white;cursor:pointer;float:left;
+}
+#un{
+    color:#fff;margin:0 0 5px 0;
+}
+#deux{
+    color:#fff;margin-bottom:5px;
+}
+#trois{
+    color:#fff;margin-bottom:5px;
+}
+#quatre{
+    color:#fff;margin-bottom:5px;
+}
+#cinq{
+    color:#fff;margin-bottom:5px;
+}
+#six{
+    color:#fff;
+}
 /*top_section*/
 .top_section{
   margin: 1em 0;
