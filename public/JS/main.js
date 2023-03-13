@@ -63,6 +63,8 @@ function pause_song(){
   song_status = false;
   clearInterval(update_second);
   wave_animation.style.opacity = '0';
+  var audio = document.getElementById("audio");
+  audio.pause();
   play_pause_btn.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
 }
 
@@ -98,6 +100,8 @@ function pause_song(){
 	if (song[index_no].ended) {
       clearInterval(update_second);
   	  wave_animation.style.opacity = '0';
+      var audio = document.getElementById("audio");
+      audio.play();
       play_pause_btn.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
     }
  }

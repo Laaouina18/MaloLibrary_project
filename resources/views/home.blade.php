@@ -42,7 +42,7 @@
     <div class="small_music_player">
     	<div class="s_player_img">
     		<div class="playing_img">
-    			<img src="{{asset('storage/images/1.jpg')}}" alt="">
+    			<img src="{{asset('images/1.jpg')}}" alt="">
     		</div>
     	
            <!-- wave animation part -->
@@ -61,7 +61,32 @@
     	</div>
     	<i class="fa fa-chevron-up" aria-hidden="true" id="up_player"></i>
     </div>
-
+	<div class="song">
+      <div class="img">
+      <img src="{{asset('images/1.jpg')}}"/>
+      </div>
+      <div class="more">
+      <audio src="{{asset('images/1.jpg')}}" id="music"></audio>
+      <div class="song_info">
+         <p id="title">OKOK</p>
+         <p>HHJ</p>
+      </div>
+      <button id="play_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+	<div class="song">
+      <div class="img">
+      <img src="{{asset('images/1.jpg')}}"/>
+      </div>
+      <div class="more">
+      <audio src="{{asset('images/1.jpg')}}" id="music"></audio>
+      <div class="song_info">
+         <p id="title">OKOK</p>
+         <p>HHJ</p>
+      </div>
+      <button id="play_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
 
     <!--  popup music player part -->
     <div class="popup_music_player">
@@ -70,6 +95,14 @@
 	justify-content: space-between;
 	align-items: center;">
 	
+
+
+
+
+
+
+
+
          <div class="top">
     	    <p>Now Playing</p>
     	    <i class="fa fa-chevron-down" aria-hidden="true" id="down_player"></i>
@@ -77,7 +110,7 @@
 	</div>
         
        <div class="song_img">
-          <img src="{{asset('storage/images/1.jpg')}}" alt="">
+          <img src="{{asset('images/1.jpg')}}" alt="">
        </div>
 
        <div class="song_description">
@@ -98,15 +131,15 @@
         <!-- controlls btn's -->
         <div class="controlls_btns">
 			<button id="backward_btn"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
-			<button id="play_pause_btn" onclick="playAudio()"><i class="fa fa-play" aria-hidden="true"></i></button>
-			<audio id="audio" src="{{asset('images/audio.')}}"></audio>
+			<button id="play_pause_btn" ><i class="fa fa-play" aria-hidden="true"></i></button>
+			<audio id="audio" src="{{asset('images/audio.mp3')}}"></audio>
 			<button id="forward_btn"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
         </div>
       </div>
     </div>
 </div>
 </div>
-<script src="{{ asset('js/song_list.js') }}"></script>
+
 <script src="{{ asset('js/main.js') }}"></script>
 
 <!-- song list file -->
