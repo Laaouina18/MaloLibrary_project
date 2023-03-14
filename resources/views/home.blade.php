@@ -139,7 +139,30 @@
     </div>
 </div>
 </div>
-
+<form action="/artists" method="POST">
+    @csrf
+    <div class="form-group">
+        <label for="name">Nom:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" id="description" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="image">Image:</label>
+        <input type="text" class="form-control" id="image" name="image" required>
+    </div>
+    <div class="form-group">
+        <label for="birthday">Anniversaire:</label>
+        <input type="date" class="form-control" id="birthday" name="birthday" required>
+    </div>
+    <div class="form-group">
+        <label for="country">Pays:</label>
+        <input type="text" class="form-control" id="country" name="country" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter l'artiste</button>
+</form>
 <script src="{{ asset('js/main.js') }}"></script>
 
 <!-- song list file -->
