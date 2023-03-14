@@ -29,7 +29,7 @@
   <tbody>
     @foreach($artist as $item)
     <tr>
-      <td scope="row">1</td>
+      <td scope="row">{{$loop->iteration}}</td>
       <td>{{$item->name}}</td>
       <td>{{$item->image}}</td>
       <td>{{$item->description}}</td>
