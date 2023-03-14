@@ -38,7 +38,12 @@
       <td>
       <a href="{{ url('/artist/' . $item->id ) }}" class="btn btn-primary">SHOW</a>
         <a href="{{url('/artist/'.$item->id.'/edit')}}" class="btn btn-primary">edit</a>
-        <a href="{{url('/artist/'.$item->id.'/delete' )}}" class="btn btn-danger">delete</a>
+        <form action="{{url('/artist/'.$item->id)}}" method="post">
+          {{method_field('DELETE')}}
+          {{csrf_field()}}
+        <button  class="btn btn-danger" type="submit" onclick="return confirm('confirm delete?')">delete</button>
+        </form>
+      
       </td>
     </tr>
     @endforeach

@@ -10,9 +10,10 @@
 <div>
     <h1>ajouter un artist</h1>
 <form action="{{url('artist/'.$artist->id)}}" method="post">
+
     {!!csrf_field()!!}
-    @method("HEAD")
-    <input   type="hidden" name="id" value="{{$artist->id}}" id="id">
+    {{ method_field('PATCH') }}
+   
   <div class="form-group">
     <label for="exampleFormControlInput1">name</label>
     <input type="text" class="form-control" value="{{$artist->name}}" id="exampleFormControlInput1" name="name" placeholder="....">
@@ -29,10 +30,7 @@
     <label for="exampleFormControlInput1">image</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" value="{{$artist->image}}" name="image" placeholder="....">
   </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" name="image" value="{{$artist->image}}" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
+  
   <div class="form-group">
   <label for="start" >Start date:</label>
 
@@ -40,7 +38,7 @@
        value="2018-07-22"
        min="2018-01-01"value="{{$artist->birthday}}" max="2018-12-31">
   </div>
-  <button class="btn ">save</buttn>
+  <button class="btn " value="update">save</button>
 </form>
 </div>
 @stop

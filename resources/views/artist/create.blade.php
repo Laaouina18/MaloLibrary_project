@@ -34,7 +34,7 @@
        value="2018-07-22"
        min="2018-01-01" max="2018-12-31">
   </div>
-  <button class="btn ">save</buttn>
+  <button class="btn " >save</buttn>
 </form>
 </div>
 @endsection

@@ -66,20 +66,29 @@ return view('artist.show')->with('artist',$artist);
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request,$id)
-    {
-        $artist=artist::find($id);
-        $input=$request->all();
-        $artist->update($input);
-        return redirect('artist')->with('flash_message','artiste est modifié');
-       
-    }
+    public function update(Request $request, $id)
+{
+    $artist = artist::find($id);
+    $validatedData = $request->validate([
+        'name' => 'required|string|max:255',
+        'country' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'image' => 'nullable|string',
+        'birthday' => 'nullable|date',
+    ]);
+    $artist->fill($validatedData);
+    $artist->save();
+
+    return redirect()->route('artist.index')->with('flash_message', 'Artiste modifié avec succès!');
+}
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(artist $artist){
-       
+    public function destroy($id){
+
+        artist::destroy($id);
+       return redirect('artist')->with('flash_message','artiste supprimé');
     }
         
     }
